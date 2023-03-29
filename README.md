@@ -5,8 +5,16 @@ dotnet new web //Para crear una minimal api desde la consola
 
 Comandos Migraciones:
 
-dotnet ef migrations add InitialCreate
+Documentacion herramienta: https://learn.microsoft.com/en-us/ef/core/cli/dotnet
 
-dotnet ef migrations add MyMigration
+dotnet ef //Para ver si se tiene instalada la herramienta para manejar migraciones
 
-dotnet ef database update
+dotnet tool install --global dotnet-ef  //Para instalar la herramienta
+
+dotnet tool update --global dotnet-ef  // Para actualizar la herramienta
+
+dotnet ef migrations add InitialCreate // Para crear la primera migración
+
+dotnet ef migrations add MyMigration // Adicionar más migraciones
+
+dotnet ef database update // este comando se ejecuta cada vez que se hace una migración, antes de esto se debe ir manualmente a la base de datos y eliminarla
