@@ -17,4 +17,4 @@ dotnet ef migrations add InitialCreate // Para crear la primera migración
 
 dotnet ef migrations add MyMigration // Adicionar más migraciones
 
-dotnet ef database update // este comando se ejecuta cada vez que se hace una migración, antes de esto se debe ir manualmente a la base de datos y eliminarla
+dotnet ef database update // este comando se ejecuta cada vez que se hace una migración. Cuando es la primera migración o la inicial se debe borrar la base de datos para que quede la tabla de migraciones
