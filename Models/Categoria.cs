@@ -14,6 +14,8 @@ public class Categoria
     public string Descripcion {get;set;}
     public int Peso {get;set;}
 
+    //SE USA PARA QUE NO SE GENERE UN CICLO YA QUE TAREAS TIENE UNA CATEGORÍA, PERO LA CATEGORÍA TIENE UN
+    //LISTADO DE TAREAS TAMBIÉN
     [JsonIgnore]
     public virtual ICollection<Tarea> Tareas {get;set;}
 }
